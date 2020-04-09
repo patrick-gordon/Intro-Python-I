@@ -4,7 +4,7 @@
 # Write a function f1 that takes two integer positional arguments and returns
 # the sum. This is what you'd consider to be a regular, normal function.
 
-# YOUR CODE HERE
+
 
 def f1(x, y):
     return x + y
@@ -16,7 +16,7 @@ print(f1(10, 20))
 # sum.
 # Note: Google for "python arbitrary arguments" and look for "*args"
 
-# YOUR CODE HERE
+
 
 def f2(*args):
     return sum(args)
@@ -38,7 +38,7 @@ print(f2(*a)) # Should print 22
 # arguments.
 # Note: Google "python default arguments" for a hint.
 
-# YOUR CODE HERE
+
 
 def f3(x = 8, y = None):
     if y is None:
@@ -66,7 +66,7 @@ print(f3(8))     # Should print 9
 
 def f4(**kwargs):
     for key, value in kwargs.items():
-        print(f'key is {key}, value: {value}')
+        print(f'key: {key}, value: {value}')
     
 
 # Should print
@@ -78,12 +78,12 @@ f4(a=12, b=30)
 # key: city, value: Berkeley
 # key: population, value: 121240
 # key: founded, value: "March 23, 1868"
-#f4(city="Berkeley", population=121240, founded="March 23, 1868")
+f4(city="Berkeley", population=121240, founded="March 23, 1868")
 
- #d = {
-  #   "monster": "goblin",
- #    "hp": 3
- #}
+d = {
+    "monster": "goblin",
+    "hp": 3
+}
 
 # How do you have to modify the f4 call below to make this work?
-#f4(d)
+f4(**d)

@@ -33,4 +33,17 @@ from datetime import datetime
 
 # user provides argument input in inital call to run the file NOT propted input
 # [] means optional input
-# 
+
+args = sys.argv
+print(args)
+
+if len(args) == 1:
+  month = datetime.today().month
+  year = datetime.today().year
+  calendar.prmonth(year, month)
+elif len(args) == 2:
+  month = int(args[1])
+  year = datetime.today().year
+  calendar.prmonth(year, month)
+else:
+  print('error')

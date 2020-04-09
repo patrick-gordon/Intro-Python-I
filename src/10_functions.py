@@ -18,5 +18,10 @@ num = int(num)
 
 # YOUR CODE HERE
 
+num = is_even(num)
 
+if num is True:
+    print('Even')
+else:
+    print('Odd')
 
